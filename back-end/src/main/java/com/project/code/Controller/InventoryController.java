@@ -41,7 +41,7 @@ public class InventoryController {
 
         Map<String, String> map = new HashMap<>();
         System.out.println("Stock Level: " + inventory.getStockLevel());
-        if (!serviceClass.ValidateProductId(product.getId())) {
+        if (!serviceClass.validateProductId(product.getId())) {
             map.put("message", "Id " + product.getId() + " not present in database");
             return map;
         }
@@ -137,7 +137,7 @@ public class InventoryController {
     public Map<String, String> removeProduct(@PathVariable Long id) {
         Map<String, String> map = new HashMap<>();
 
-        if (!serviceClass.ValidateProductId(id)) {
+        if (!serviceClass.validateProductId(id)) {
             map.put("message", "Id " + id + " not present in database");
             return map;
         }

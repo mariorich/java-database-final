@@ -42,7 +42,7 @@ public class ServiceClass {
     }
 
     public boolean validateProduct(Product product){
-        Product result = productRepository.findByid(product.getId);
+        Product result = productRepository.findByid(product.getId());
         if(result != null){
             return true;
         }
