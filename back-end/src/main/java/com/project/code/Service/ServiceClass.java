@@ -33,8 +33,8 @@ public class ServiceClass {
         return result;
     }
 
-    public boolean validadeProduct(Product product){
-        Product result = productRepository.findByName(product.getName());
+    public boolean ValidateProductId(Long id){
+        Product result = productRepository.findByid(id);
         if(result != null){
             return true;
         }
